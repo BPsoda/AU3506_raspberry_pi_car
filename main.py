@@ -2,9 +2,11 @@ import numpy
 import cv2
 import time
 
-from controller import PIDcontroller
+from pid_controller import PID_Controller
 from driver import driver
 from line_detection import line_detection
+from cross_detect import cross_detection
+from sign_detect import sign_detection
 
 CROSS_FLAGS = [2, 4]
 
@@ -18,7 +20,7 @@ if __name__ == '__main__':
     cap1 = cv2.VideoCapture(0)
 
     # objects
-    controller = PIDcontroller()
+    controller = PID_Controller(1,0,0,-1,1)
     car = driver()
     cross_count = 0
     while True:
@@ -32,12 +34,12 @@ if __name__ == '__main__':
                 continue
         # sign detection
         sign = sign_detection()
-        if sign == ...:
-            ...
-            continue
-        elif sign == ...:
-            ...
-            continue
+        # if sign == ...:
+        #     ...
+        #     continue
+        # elif sign == ...:
+        #     ...
+        #     continue
         # lane keep
         error = line_detection(frame1)
         dv = controller.get_output(error)
