@@ -1,2 +1,2 @@
-def cross_detction():
+def cross_detection():
     return False
