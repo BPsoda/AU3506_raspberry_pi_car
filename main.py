@@ -7,7 +7,7 @@ from driver import driver
 from line_detection import line_detection
 from cross_detect import cross_detection
 from sign_detect import sign_detection
-
+from sift_match import SIFT_Detection
 CROSS_FLAGS = [2, 4]
 
 # move
@@ -33,7 +33,8 @@ if __name__ == '__main__':
                 for i in range(10): driver.set_speed(RIGHT_INPLACE)
                 continue
         # sign detection
-        sign = sign_detection()
+        info,img=SIFT_Detection(frame1)
+        print(info)
         # if sign == ...:
         #     ...
         #     continue
