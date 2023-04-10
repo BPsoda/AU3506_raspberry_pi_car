@@ -1,4 +1,5 @@
 import serial
+
 class driver:
     def __init__(self,portx = "/dev/ttyAMA0",bps = 57600):
         self.portx = portx
