@@ -1,3 +1,5 @@
+#!/usr/bin/python
+#coding=utf-8
 import numpy
 import cv2
 import time
