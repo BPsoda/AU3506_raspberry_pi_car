@@ -1,3 +1,5 @@
+#!/usr/bin/python
+#coding=utf-8
 import cv2
 import time
 from baseImage import Image
