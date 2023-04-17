@@ -30,7 +30,8 @@ if __name__ == '__main__':
             cross_count += 1
             if cross_count in CROSS_FLAGS:
                 # start turning right
-                for i in range(10): driver.set_speed(RIGHT_INPLACE)
+                for i in range(10): 
+                    driver.set_speed(RIGHT_INPLACE)
                 continue
         # sign detection
         sign = sign_detection()

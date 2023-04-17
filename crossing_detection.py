@@ -4,7 +4,7 @@ import numpy as np
 COLOR_THRESH = {'black': {'lower': (0,0,0), 'upper': (360, 255, 80)}}
 THRESHOLD = 5000
 
-def detect_crossing(img):
+def cross_detection(img):
     roi = [(0.4,0.8),(0.2,0.8)]
     img_hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
     
@@ -25,4 +25,3 @@ def detect_crossing(img):
 
 if __name__=="__main__":
     img = cv2.imread('imgs/Crossing.jpg')
-    detect_crossing(img)
