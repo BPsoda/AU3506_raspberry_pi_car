@@ -28,7 +28,7 @@ if __name__ == '__main__':
     while True:
         _, frame1 = cap1.read()
         # crossing detection
-        if cross_detection():
+        if detect_crossing():
             cross_count += 1
             if cross_count in CROSS_FLAGS:
                 # start turning right
