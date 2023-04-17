@@ -25,7 +25,7 @@ def SIFT_Detection(inputArray):
     if (len(result_with_name)==0):
         return "没有对应的匹配",img
     sorted_result = sorted(result_with_name, key=lambda x: x[1]['confidence'])
-    info=f"发现了{sorted_result[0][0]}标识符,匹配相似度:{sorted_result[0][1]['confidence']}"
+    info="发现了{}标识符,匹配相似度:{}".format(sorted_result[0][0], sorted_result[0][1]['confidence'])
     print("use:",time.time() - start,"s")
     img.rectangle(rect=sorted_result[0][1]['rect'], color=(0, 0, 255), thickness=3)
     return info,img
