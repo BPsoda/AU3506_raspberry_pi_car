@@ -17,10 +17,7 @@ def cross_detection(img):
     img_closed = cv2.morphologyEx(img_roi, cv2.MORPH_CLOSE, structure)
     img_opened = cv2.morphologyEx(img_closed, cv2.MORPH_OPEN, structure)
     res = np.sum(img_opened//255)
-    print(res)
-
-    cv2.imshow(" ", img_opened)
-    cv2.waitKey()
+    print('black zone: ', res)
     return res > THRESHOLD
 
 if __name__=="__main__":
